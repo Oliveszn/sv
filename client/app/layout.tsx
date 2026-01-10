@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Anton, Bebas_Neue, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import localFont from "next/font/local";
+import Footer from "@/components/Common/Footer";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -40,12 +41,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html
+      lang="en"
+      className={`${inter.variable} ${anton.variable} ${bebas.variable} ${playfair.variable} antialiased`}
+    >
       <body
-        className={`${inter.variable} ${anton.variable} ${bebas.variable} ${playfair.variable} antialiased`}
+        className="flex flex-col min-h-screen"
         suppressHydrationWarning={true}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
