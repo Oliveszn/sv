@@ -41,3 +41,46 @@ body {
   text-align: center;
   width: 100%;
 }
+
+@keyframes star-animation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.about h2 {
+  position: relative;
+  padding-left: 3.5rem;
+}
+
+.about h2::before {
+  content: "";
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='48' height='48' fill='none'%3E%3Cpath fill='%23A37642' d='M26.667 0h-5.334v17.562L8.915 5.144 5.144 8.915l12.418 12.418H0v5.334h17.562L5.144 39.085l3.771 3.771 12.418-12.418V48h5.334V30.438l12.418 12.418 3.771-3.771-12.418-12.418H48v-5.334H30.438L42.856 8.915l-3.771-3.771-12.418 12.418V0Z'/%3E%3C/svg%3E");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  bottom: 0.5rem;
+  left: 0;
+  top: 0.2em;
+  display: inline-block;
+  height: 50px;
+  margin-right: 1rem;
+  perspective: 100px;
+  position: absolute;
+  vertical-align: top;
+  width: 50px;
+  animation: star-animation 4s linear infinite;
+}
+
+.hero {
+  perspective: 800px;
+}
+
+.hero img {
+  /* transition: transform 0.1s ease; */
+  /* transform-style: preserve-3d; */
+  transform-style: preserve-3d;
+  will-change: transform;
+}

@@ -1,11 +1,19 @@
 "use client";
 
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import Link from "next/link";
 
 export default function HeroSection() {
   const wrapperRef = useRef<HTMLDivElement | null>(null);
   const headerRef = useRef<HTMLHeadingElement | null>(null);
+
+  let links = [
+    { name: "The artist", link: "/about" },
+    { name: "The music", link: "/music" },
+    { name: "The videos", link: "/videos" },
+    { name: "The store", link: "/store" },
+  ];
 
   useEffect(() => {
     const wrapper = wrapperRef.current;
@@ -143,20 +151,18 @@ export default function HeroSection() {
             </svg>
           </div>
 
-          <ul className="flex items-center justify-center gap-6">
-            <li className="text-white cursor-pointer inline-block text-base list-none relative no-underline uppercase">
-              The artist
-            </li>
-            <li className="text-white cursor-pointer inline-block text-base list-none relative no-underline uppercase">
-              The music
-            </li>
-            <li className="text-white cursor-pointer inline-block text-base list-none relative no-underline uppercase">
-              The videos
-            </li>
-            <li className="text-white cursor-pointer inline-block text-base list-none relative no-underline uppercase">
-              The store
-            </li>
-          </ul>
+          <div className="flex items-center justify-center gap-6 font-inter">
+            {links.map((items) => (
+              <Link
+                key={items.name}
+                href={items.link}
+                aria-label={`Go to ${items.name}`}
+                className="text-white cursor-pointer inline-block text-base list-none relative no-underline uppercase"
+              >
+                {items.name}
+              </Link>
+            ))}
+          </div>
 
           <div className="text-[#E7D7C5] text-xl uppercase items-start cursor-pointer flex gap-4 justify-start font-playfair">
             <span className="inline-block">For bookings</span>
