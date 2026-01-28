@@ -1,5 +1,11 @@
-import React from "react";
+import MainSection from "@/components/About/MainSection";
+import HeroSection from "@/components/Home/HeroSection";
 
 export default function About() {
-  return <div>about</div>;
+  return (
+    <main>
+      <HeroSection />
+      <MainSection />
+    </main>
+  );
 }

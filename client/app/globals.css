@@ -21,16 +21,23 @@
   }
 }
 
+html,
 body {
   /* background: var(--background); */
   /* color: var(--foreground); */
   font-family: Arial, Helvetica, sans-serif;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none;
 }
 
 .homer {
   background-image: url("/ykb_1.svg");
-  /* display: flex; */
-  /* flex-direction: column; */
   gap: 2rem;
   min-height: 115vh;
   background-attachment: fixed;
