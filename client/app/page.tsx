@@ -5,7 +5,7 @@ import VideoSection from "@/components/Home/VideoSection";
 
 export default function Home() {
   return (
-    <main className="">
+    <main className="flex flex-col gap-10">
       <HeroSection />
       <AboutSection />
       <MusicSection />

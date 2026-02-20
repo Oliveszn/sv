@@ -1,4 +1,7 @@
+import Link from "next/link";
 import ContentWrapper from "./ContentWrapper";
+import HoverRevealLink from "./HoverRevealLink";
+import Logo from "./Svg/Logo";
 
 export default function Footer() {
   return (
@@ -9,20 +12,39 @@ export default function Footer() {
             For bookings and informations
           </h1>
           <span className="text-[#594024] font-bold text-2xl font-playfair">
-            info@seyi.com
+            info@yusufkanbai.com
           </span>
         </div>
         <div className="flex flex-wrap items-center justify-between gap-6 my-8 md:my-10 lg:my-16">
-          <div className="order-1 text-3xl font-bold">NSNV</div>
+          <Logo />
 
           <div className="order-3 w-full flex justify-center gap-6 text-sm md:order-2 md:w-auto">
-            <span className="text-xl font-medium">Instagram</span>
-            <span className="text-xl font-medium">Twitter</span>
-            <span className="text-xl font-medium">Snapchat</span>
+            <HoverRevealLink
+              href="https://www.instagram.com/ykbonly/"
+              target="_blank"
+              text="Instagram"
+              className="text-lg md:text-xl font-medium uppercase"
+            />
+            <HoverRevealLink
+              href="https://x.com/ykbonly"
+              target="_blank"
+              text="Twitter"
+              className="text-lg md:text-xl font-medium uppercase"
+            />
+            <HoverRevealLink
+              href="#"
+              target=""
+              text="snapchat"
+              className="text-lg md:text-xl font-medium uppercase"
+            />
           </div>
 
           <div className="order-2 flex items-center justify-center gap-6 md:order-3">
-            <span className="audiomack cursor-pointer">
+            <Link
+              target="_blank"
+              href={"https://audiomack.com/ykb_"}
+              className="audiomack cursor-pointer"
+            >
               <svg
                 width="32"
                 height="32"
@@ -64,8 +86,14 @@ export default function Footer() {
                   </clipPath>
                 </defs>
               </svg>
-            </span>
-            <span className="youtube cursor-pointer">
+            </Link>
+            <Link
+              target="_blank"
+              href={
+                "https://music.youtube.com/channel/UCKkrFMEVFytw-IQEvCQrJXQ"
+              }
+              className="youtube cursor-pointer"
+            >
               <svg
                 width="32"
                 height="32"
@@ -92,8 +120,14 @@ export default function Footer() {
                   </clipPath>
                 </defs>
               </svg>
-            </span>
-            <span className="spotify cursor-pointer">
+            </Link>
+            <Link
+              target="_blank"
+              href={
+                "https://open.spotify.com/artist/2f8rjDwhSy9IDL6sB6BEEE?si=yxU20K35QbObaTvK62iClw&nd=1&dlsi=d673af775fdc419b"
+              }
+              className="spotify cursor-pointer"
+            >
               <svg
                 width="32"
                 height="32"
@@ -120,8 +154,12 @@ export default function Footer() {
                   </clipPath>
                 </defs>
               </svg>
-            </span>
-            <span className="apple cursor-pointer">
+            </Link>
+            <Link
+              target="_blank"
+              href={"https://music.apple.com/ng/artist/yusufkanbai/1469879640"}
+              className="apple cursor-pointer"
+            >
               <svg
                 width="32"
                 height="24"
@@ -148,7 +186,7 @@ export default function Footer() {
                   </clipPath>
                 </defs>
               </svg>
-            </span>
+            </Link>
           </div>
         </div>
       </ContentWrapper>

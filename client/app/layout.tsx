@@ -32,8 +32,8 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Seyi Vibes",
-  description: "Fan website of Seyi Vibes",
+  title: "Yusuf Kanbai",
+  description: "Fan website of Ykb",
 };
 
 export default function RootLayout({

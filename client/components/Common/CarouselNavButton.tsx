@@ -21,7 +21,7 @@ export default function CarouselNavButton({
         rounded-full
         shadow-[inset_3px_-3px_9px_#cacaca]
         cursor-pointer
-        p-[1.3rem]
+        p-4 md:p-[1.3rem]
         transition-all
         duration-500
         ease-in-out
