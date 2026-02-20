@@ -17,7 +17,7 @@ export default function NavHeader() {
     { name: "The artist", link: "/about" },
     { name: "The music", link: "/music" },
     { name: "The videos", link: "/videos" },
-    { name: "The store", link: "/store" },
+    { name: "The store", link: "https://www.garmspot.com/activ-yard/" },
   ];
 
   const toggleMenu = () => {
@@ -113,6 +113,10 @@ export default function NavHeader() {
             <button
               key={items.name}
               onClick={() => {
+                if (items.link.startsWith("http")) {
+                  window.open(items.link, "_blank", "noopener,noreferrer");
+                  return;
+                }
                 if (pathname === items.link) {
                   return;
                 }
@@ -160,6 +164,11 @@ export default function NavHeader() {
             <button
               key={item.name}
               onClick={() => {
+                if (item.link.startsWith("http")) {
+                  window.open(item.link, "_blank", "noopener,noreferrer");
+                  toggleMenu();
+                  return;
+                }
                 if (pathname === item.link) {
                   toggleMenu();
                   return;

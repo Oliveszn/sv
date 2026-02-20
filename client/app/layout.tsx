@@ -4,6 +4,7 @@ import "./globals.css";
 import localFont from "next/font/local";
 import Footer from "@/components/Common/Footer";
 import { TransitionProvider } from "./providers/TransitionProvider";
+import LenisProvider from "@/components/Common/LenisProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -50,10 +51,12 @@ export default function RootLayout({
         className="flex flex-col min-h-screen"
         suppressHydrationWarning={true}
       >
-        <TransitionProvider>
-          {children}
-          <Footer />
-        </TransitionProvider>
+        <LenisProvider>
+          <TransitionProvider>
+            {children}
+            <Footer />
+          </TransitionProvider>
+        </LenisProvider>
       </body>
     </html>
   );
