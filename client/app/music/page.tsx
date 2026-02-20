@@ -1,3 +1,11 @@
+import HeroSection from "@/components/Home/HeroSection";
+import MainSection from "@/components/Music/MainSection";
+
 export default function Music() {
-  return <div>mmm</div>;
+  return (
+    <main>
+      <HeroSection />
+      <MainSection />
+    </main>
+  );
 }

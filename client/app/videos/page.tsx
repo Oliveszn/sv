@@ -1,5 +1,11 @@
-import React from "react";
+import HeroSection from "@/components/Home/HeroSection";
+import MainSection from "@/components/Videos/MainSection";
 
 export default function Videos() {
-  return <div>video</div>;
+  return (
+    <main>
+      <HeroSection />
+      <MainSection />
+    </main>
+  );
 }
